@@ -25,7 +25,7 @@ var stringifyJSON = function(obj) {
       if (obj[key] === undefined || typeof(obj[key]) === 'function') {
         continue;
       }  
-      temp.push(stringifyJSON(key) + ':' + tringifyJSON(obj[key]));
+      temp.push(stringifyJSON(key) + ':' + stringifyJSON(obj[key]));
       //}
     }
     return '{' + temp.join(',') + '}';
