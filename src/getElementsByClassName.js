@@ -12,11 +12,11 @@ var getElementsByClassName = function(className) {
   //element.classList
   var result = [];
   var getNode = function(node) {
-    if(node.classList.contains(className)) {
+    if (node.classList.contains(className)) {
       result.push(node);
     }
-    for(var i = 0 ; i < node.childNodes.length; i++) {
-      if(node.childNodes[i].className !== undefined) {
+    for (var i = 0; i < node.childNodes.length; i++) {
+      if (node.childNodes[i].className !== undefined) {
         getNode(node.childNodes[i]);
       }
     }
